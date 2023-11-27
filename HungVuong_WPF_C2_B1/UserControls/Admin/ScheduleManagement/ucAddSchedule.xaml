@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="HungVuong_WPF_C2_B1.ucAddSchedule"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HungVuong_WPF_C2_B1"
+             mc:Ignorable="d" 
+             Background="White"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <StackPanel>
+        <Label Content="Chọn phim:" FontWeight="Bold"></Label>
+        <ComboBox Name="cbScheduleMovie">
+        </ComboBox>
+        <Button Name="btnAdd" Content="Xác nhận"
+                    Margin="0 15 0 0"
+                Click="btnAdd_Click">
+        </Button>
+        
+        <Button Name="btnCancel" Content="Hủy" 
+                Margin="0 15 0 0"
+                Click="btnCancel_Click">
+
+        </Button>
+    </StackPanel>
+</UserControl>

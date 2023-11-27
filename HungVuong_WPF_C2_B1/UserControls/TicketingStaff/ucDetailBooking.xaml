@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="HungVuong_WPF_C2_B1.ucDetailBooking"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HungVuong_WPF_C2_B1"
+             mc:Ignorable="d"
+             Background="White"
+             d:DesignHeight="500" d:DesignWidth="1500">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Margin="0 0 0 20">
+            <TextBlock Text="Loại rạp:" FontWeight="Bold" Margin="0 0 5 0"/>
+            <TextBlock Name="tbCinemaType" Margin="0 0 30 0"/>
+            <TextBlock Text="Ngày:" FontWeight="Bold" Margin="0 0 5 0"/>
+            <TextBlock Name="tbDate" Margin="0 0 30 0"/>
+            <TextBlock Text="Giờ:" FontWeight="Bold" Margin="0 0 5 0"/>
+            <TextBlock Name="tbShowtime" Margin="0 0 30 0"/>
+            <TextBlock Text="Tên khách hàng:" FontWeight="Bold" Margin="0 0 5 0"/>
+            <TextBlock Name="tbCustomerName" Margin="0 0 30 0"/>
+            <TextBlock Text="Số điện thoại:" FontWeight="Bold" Margin="0 0 5 0"/>
+            <TextBlock Name="tbCustomerPhone" Margin="0 0 0 0"/>
+        </StackPanel>
+
+        <DataGrid Name="dgListTicket" Grid.Row="1" AutoGenerateColumns="True" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Số ghế" Binding="{Binding SeatNumber}" Width="300"/>
+                <DataGridTextColumn Header="Số tiền" Binding="{Binding Price}" Width="300"/>
+                <DataGridTextColumn Header="Loại vé" Binding="{Binding Type}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <StackPanel Orientation="Horizontal" Margin="0 15 0 0" Grid.Row="2" HorizontalAlignment="Center">
+            <TextBlock Text="Tổng số tiền: " FontWeight="Bold" FontSize="20" Margin="0 0 5 0"/>
+            <TextBlock Name="tbTotalPrice" FontSize="20" Margin="0 0 50 0"/>
+            <TextBlock Text="Tổng số ghế: " FontWeight="Bold" FontSize="20" Margin="0 0 5 0"/>
+            <TextBlock Name="tbTotalSeat" FontSize="20" Margin="0 0 50 0"/>
+            <Button Name="btnConfirm" Content="Xác nhận đặt vé" Margin="0 0 48 0" FontSize="19" Width="200" Click="btnConfirm_Click"/>
+            <Button Name="btnCancel" Content="Hủy đặt vé" FontSize="19" Width="200" Click="btnCancel_Click"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

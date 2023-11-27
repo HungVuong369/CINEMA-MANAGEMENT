@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Movies>
+  <Movie Id="MOV01" Name="Avengers: Endgame" Content="The Avengers must assemble once more in order to undo Thanos' actions and restore order to the universe." runtime="181" Url="https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_FMjpg_UX1000_.jpg">
+    <Cinema Type="Standard">
+      <Date Date="24/6/2023">
+        <Showtime Hour="07" Minute="00" />
+      </Date>
+    </Cinema>
+  </Movie>
+  <Movie Id="MOV02" Name="Spider-Man: No Way Home" Content="Peter Parker teams up with his counterparts from different dimensions to stop a threat to all reality." runtime="148" Url="https://m.media-amazon.com/images/M/MV5BZWMyYzFjYTYtNTRjYi00OGExLWE2YzgtOGRmYjAxZTU3NzBiXkEyXkFqcGdeQXVyMzQ0MzA0NTM@._V1_FMjpg_UX1000_.jpg">
+    <Cinema Type="Vip" />
+  </Movie>
+  <Movie Id="MOV03" Name="Black Widow" Content="Natasha Romanoff confronts the darker parts of her ledger when a dangerous conspiracy with ties to her past arises." runtime="133" Url="https://m.media-amazon.com/images/M/MV5BZGRlNTY3NGYtM2YzZS00N2YyLTg0ZDYtNmY2ZDg2NDM3N2JlXkEyXkFqcGdeQXVyNTI4MzE4MDU@._V1_FMjpg_UX1000_.jpg">
+    <Cinema Type="Standard">
+      <Date Date="24/6/2023">
+        <Showtime Hour="12" Minute="00" />
+      </Date>
+    </Cinema>
+  </Movie>
+  <Movie Id="MOV04" Name="Mission: Impossible - Fallout" Content="Ethan Hunt and his IMF team, along with some familiar allies, race against time after a mission gone wrong." runtime="147" Url="https://m.media-amazon.com/images/M/MV5BNjRlZmM0ODktY2RjNS00ZDdjLWJhZGYtNDljNWZkMGM5MTg0XkEyXkFqcGdeQXVyNjAwMjI5MDk@._V1_FMjpg_UX1000_.jpg">
+    <Cinema Type="Standard">
+      <Date Date="23/6/2023">
+        <Showtime Hour="08" Minute="00" />
+      </Date>
+    </Cinema>
+  </Movie>
+  <Movie Id="MOV05" Name="Black And White" Content="Blabla" runtime="120" Url="Non">
+    <Cinema Type="Vip" />
+  </Movie>
+</Movies>

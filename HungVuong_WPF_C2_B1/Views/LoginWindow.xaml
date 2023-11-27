@@ -1,0 +1,46 @@
+﻿<Window x:Class="HungVuong_WPF_C2_B1.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HungVuong_WPF_C2_B1"
+        mc:Ignorable="d"
+        Title="LoginWindow" 
+        WindowStartupLocation="CenterScreen"
+        Closing="Window_Closing"
+        Loaded="Window_Loaded">
+    <Grid>
+        <Border BorderThickness="2" BorderBrush="DarkSlateGray" CornerRadius="5" Margin="30">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10" HorizontalAlignment="Center">
+                    <TextBlock Text="Đăng nhập" FontSize="24" VerticalAlignment="Center"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="1" Margin="40,20,40,0" HorizontalAlignment="Center">
+                    <StackPanel Orientation="Horizontal" Margin="0 0 0 20">
+                        <Image Source="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_user-256.png" Width="25" Height="25" Margin="0 0 10 0"/>
+                        <TextBox Name="txtUsername" Width="200" FontSize="16" Padding="8" BorderThickness="1" BorderBrush="DarkSlateGray" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center"
+                                 PreviewTextInput="txtPassword_PreviewTextInput"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0 0 0 20">
+                        <Image Source="https://cdn0.iconfinder.com/data/icons/google-material-design-3-0/48/ic_lock_48px-256.png" Width="25" Height="25" Margin="0 0 10 0"/>
+                        <PasswordBox Name="txtPassword" Width="200" FontSize="16" Padding="8" BorderThickness="1" BorderBrush="DarkSlateGray" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center" PreviewTextInput="txtPassword_PreviewTextInput"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 0 0 25">
+                    <Button Name="btnLogin" Content="Đăng nhập" Background="#007ACC" Foreground="White" BorderThickness="0" Padding="10 5" FontSize="16" Width="120" Margin="0 0 20 0" Click="btnLogin_Click"/>
+                    <Button Name="btnExit" Content="Thoát" Background="#D8D8D8" Foreground="Black" BorderThickness="0" Padding="10 5" FontSize="16" Width="120"
+                            Click="btnExit_Click"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

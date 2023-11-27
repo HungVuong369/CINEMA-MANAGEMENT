@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9CAE8CAC-333A-4DEC-A61E-D938EFED9D48}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HungVuong_WPF_C2_B1</RootNamespace>
+    <AssemblyName>HungVuong_WPF_C2_B1</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="ToastNotifications, Version=2.3.0.0, Culture=neutral, PublicKeyToken=e89d9d7314a7c797, processorArchitecture=MSIL">
+      <HintPath>..\packages\ToastNotifications.2.3.0\lib\net40\ToastNotifications.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ToastNotifications.Messages, Version=2.3.0.0, Culture=neutral, PublicKeyToken=e89d9d7314a7c797, processorArchitecture=MSIL">
+      <HintPath>..\packages\ToastNotifications.Messages.2.3.0\lib\net40\ToastNotifications.Messages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Converter\ConvertString.cs" />
+    <Compile Include="DataProvider\XmlFileManager.cs" />
+    <Compile Include="DTOs\AccountDTO.cs" />
+    <Compile Include="DTOs\DetailBooking.cs" />
+    <Compile Include="DTOs\Order.cs" />
+    <Compile Include="DTOs\OrderDetail.cs" />
+    <Compile Include="Models\Account\Account.cs" />
+    <Compile Include="Models\Account\AccountList.cs" />
+    <Compile Include="Models\CustomerInfo.cs" />
+    <Compile Include="Models\Cinema\Seat.cs" />
+    <Compile Include="DataProvider\Path.cs" />
+    <Compile Include="DataProvider\SeedData.cs" />
+    <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\Schedule.cs" />
+    <Compile Include="Repository\IRepositoryBase.cs" />
+    <Compile Include="Repository\RepositoryBase.cs" />
+    <Compile Include="UnitOfWork.cs" />
+    <Compile Include="UserControls\Admin\MovieManagement\ucMovieManagement.xaml.cs">
+      <DependentUpon>ucMovieManagement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Admin\MovieManagement\ucUpdateMovie.xaml.cs">
+      <DependentUpon>ucUpdateMovie.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Admin\ScheduleManagement\ucAddSchedule.xaml.cs">
+      <DependentUpon>ucAddSchedule.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Admin\ScheduleManagement\ucDate.xaml.cs">
+      <DependentUpon>ucDate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Admin\ScheduleManagement\ucDatePicker.xaml.cs">
+      <DependentUpon>ucDatePicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Admin\ScheduleManagement\ucScheduleManagement.xaml.cs">
+      <DependentUpon>ucScheduleManagement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Admin\ScheduleManagement\ucShowtime.xaml.cs">
+      <DependentUpon>ucShowtime.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Admin\ScheduleManagement\ucUpdateShowtime.xaml.cs">
+      <DependentUpon>ucUpdateShowtime.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Admin\Statistics\ucOrderDetail.xaml.cs">
+      <DependentUpon>ucOrderDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Admin\Statistics\ucStatistics.xaml.cs">
+      <DependentUpon>ucStatistics.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Admin\UserManagement\ucUpdate.xaml.cs">
+      <DependentUpon>ucUpdate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Admin\UserManagement\ucUserManagement.xaml.cs">
+      <DependentUpon>ucUserManagement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Admin\Modal.xaml.cs">
+      <DependentUpon>Modal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TicketingStaff\ucBookingTicket.xaml.cs">
+      <DependentUpon>ucBookingTicket.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TicketingStaff\ucDetailBooking.xaml.cs">
+      <DependentUpon>ucDetailBooking.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TicketingStaff\ucDetailMovie.xaml.cs">
+      <DependentUpon>ucDetailMovie.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TicketingStaff\ucListMovie.xaml.cs">
+      <DependentUpon>ucListMovie.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TicketingStaff\ucListSeat.xaml.cs">
+      <DependentUpon>ucListSeat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TicketingStaff\ucListSeatNumber.xaml.cs">
+      <DependentUpon>ucListSeatNumber.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TicketingStaff\ucTicketPrice.xaml.cs">
+      <DependentUpon>ucTicketPrice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucNotifier.xaml.cs">
+      <DependentUpon>ucNotifier.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\CinemaViewModel.cs" />
+    <Compile Include="ViewModels\MovieViewModel.cs" />
+    <Compile Include="Views\AdminWindow.xaml.cs">
+      <DependentUpon>AdminWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TicketingStaffWindow.xaml.cs">
+      <DependentUpon>TicketingStaffWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="UserControls\Admin\MovieManagement\ucMovieManagement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Admin\MovieManagement\ucUpdateMovie.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Admin\ScheduleManagement\ucAddSchedule.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Admin\ScheduleManagement\ucDate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Admin\ScheduleManagement\ucDatePicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Admin\ScheduleManagement\ucScheduleManagement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Admin\ScheduleManagement\ucShowtime.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Admin\ScheduleManagement\ucUpdateShowtime.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Admin\Statistics\ucOrderDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Admin\Statistics\ucStatistics.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Admin\UserManagement\ucUpdate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Admin\UserManagement\ucUserManagement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Admin\Modal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\TicketingStaff\ucBookingTicket.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\TicketingStaff\ucDetailBooking.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\TicketingStaff\ucDetailMovie.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\TicketingStaff\ucListMovie.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\TicketingStaff\ucListSeat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\TicketingStaff\ucListSeatNumber.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\TicketingStaff\ucTicketPrice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\ucNotifier.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdminWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LoginWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TicketingStaffWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\Cinema\Cinema.cs" />
+    <Compile Include="Models\Cinema\CinemaVip.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

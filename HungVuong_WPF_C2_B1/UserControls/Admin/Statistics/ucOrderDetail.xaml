@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="HungVuong_WPF_C2_B1.ucOrderDetail"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HungVuong_WPF_C2_B1"
+             mc:Ignorable="d" 
+             Background="White"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Vertical">
+            <Label HorizontalAlignment="Center"
+                   FontSize="20"
+                   FontWeight="Bold">Chi tiết</Label>
+            <StackPanel Name="spSeats">
+            </StackPanel>
+        </StackPanel>
+
+        <DataGrid Grid.Row="1" Name="dgOrderDetail" Margin="10"
+                  AutoGenerateColumns="False" SelectionMode="Single" SelectionUnit="FullRow"
+                  IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Số ghế" Binding="{Binding SeatNumber}" Width="100"/>
+                <DataGridTextColumn Header="Loại khách" Binding="{Binding Type}" Width="100"/>
+                <DataGridTextColumn Header="Số tiền" Binding="{Binding Price}" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

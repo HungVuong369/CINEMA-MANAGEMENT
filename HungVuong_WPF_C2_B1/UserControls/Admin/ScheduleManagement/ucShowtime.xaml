@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="HungVuong_WPF_C2_B1.ucShowtime"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HungVuong_WPF_C2_B1"
+             mc:Ignorable="d" 
+             Background="White"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Content="Danh sách giờ" FontSize="24" FontWeight="Bold"/>
+
+        <Button Name="btnAdd" Grid.Row="0" Content="Thêm" Margin="5" Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Center"
+                Click="btnAdd_Click"/>
+
+        <DataGrid Name="dgShowtime" Grid.Row="1" AutoGenerateColumns="False" Margin="5"
+          CanUserAddRows="False" IsReadOnly="True"
+          HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+          SelectionMode="Single">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Tên phim" Binding="{Binding MovieName}" Width="100"/>
+                <DataGridTextColumn Header="Thời lượng" Binding="{Binding Runtime}" Width="100"/>
+                <DataGridTextColumn Header="Loại rạp" Binding="{Binding CinemaType}" Width="100"/>
+                <DataGridTextColumn Header="Ngày" Binding="{Binding Date}" Width="100"/>
+                <DataGridTextColumn Header="Thời gian" Binding="{Binding Showtime}" Width="150"/>
+                <DataGridTemplateColumn Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button Name="btnDeleteDate" Content="Xóa" Margin="5" 
+                                        Width="70" Height="30"
+                                        Click="btnDeleteDate_Click"/>
+                                <Button Name="btnUpdate" Content="Sửa" Margin="5" 
+                                        Width="70" Height="30"
+                                        Click="btnUpdate_Click"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>
